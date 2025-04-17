@@ -4,7 +4,7 @@
   <dl>
   <dt>APR</dt>
     <dd>
-      <%= @user_apr %>
+      <%= @user_apr.to_fs(:percentage, { :precision => 4}) %>
     </dd>
   </dl>
 </div>
@@ -13,7 +13,7 @@
   <dl>
     <dt>Number of years</dt>
     <dd>
-      <%= @user_years %>
+      <%= @user_years.to_fs %>
     </dd>
   </dl>
 </div>
@@ -22,7 +22,7 @@
   <dl>
     <dt>Principal</dt>
     <dd>
-      <%= @user_principal %>
+      <%= @user_principal.to_fs(:currency) %>
     </dd>
   </dl>
 </div>
@@ -31,7 +31,7 @@
   <dl>
     <dt>Payment</dt>
     <dd>
-      <%= @the_result %>
+      <%= @the_result.to_fs(:currency) %>
     </dd>
   </dl>
 </div>

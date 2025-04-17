@@ -1,5 +1,6 @@
 require "sinatra"
 require "sinatra/reloader"
+require "./config/environment"
 
 get("/square/new") do
 
@@ -57,7 +58,7 @@ get("/payment/results") do
   @user_principal = params.fetch("user_principal").to_f
 
   @numerator = (@user_apr / (100*12) ) * @user_principal
-  @denominator = 1 - (1 + @user_apr) ** (-@user_years * 12)
+  @denominator = 1 - (1 + @user_apr/(100*12)) ** (-@user_years * 12)
   @the_result = @numerator / @denominator
 
   erb(:apr_results)
