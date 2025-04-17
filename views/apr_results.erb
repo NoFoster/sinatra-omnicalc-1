@@ -1,0 +1,41 @@
+<h1> Payment Results </h1>
+
+<div>
+  <dl>
+  <dt>APR</dt>
+    <dd>
+      <%= @user_apr %>
+    </dd>
+  </dl>
+</div>
+
+<div>
+  <dl>
+    <dt>Number of years</dt>
+    <dd>
+      <%= @user_years %>
+    </dd>
+  </dl>
+</div>
+
+<div>
+  <dl>
+    <dt>Principal</dt>
+    <dd>
+      <%= @user_principal %>
+    </dd>
+  </dl>
+</div>
+
+<div>
+  <dl>
+    <dt>Payment</dt>
+    <dd>
+      <%= @the_result %>
+    </dd>
+  </dl>
+</div>
+
+<a href="/payment/new">
+Calculate another payment
+</a>
