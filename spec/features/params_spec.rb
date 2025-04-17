@@ -694,7 +694,7 @@ describe "/random/new" do
 end
 
 describe "/random/new" do
-  it "outputs a random number when the form is filled out and submitted", points: 10, hint: h("structure_must_match label_for_input copy_must_match") do
+  it "outputs a random number when the form is filled out and submitted", points: 10, hint: h("label_for_input copy_must_match") do
     random_numbers = []
     5.times do
       visit "/random/new"
